@@ -1,9 +1,22 @@
+/* ALL */
 * {
     box-sizing: border-box;
 }
 a{
      text-decoration: none; 
 }
+.image-center{
+    display: block; 
+    margin: auto; 
+    width: 100%; 
+    object-fit: cover;
+}
+
+.price{
+    font-weight: bold;
+}
+
+/* HEADER */
 .header{
     background-color: #26272b;
     color: white;
@@ -12,6 +25,13 @@ a{
     margin-bottom: 10px; 
     margin: 0;
 }
+.banner{
+    font-size: 15px;
+    font-family: 'Conv_Proxima Nova Bold', sans-serif
+}
+
+
+/* FOOTER */
 .footer {
     background-color: #26272b;
     color: white;
@@ -21,6 +41,14 @@ a{
     margin-top: 50px; 
     margin: 0;
 }
+.footer-title{
+    font-size: 16px;
+}
+.footer-content{
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* GRID SYSTEM */
 .row::after {
     content: "";
     clear: both;
@@ -49,6 +77,14 @@ a{
     clear: both;
     display: table;
 }
+.float-right{
+    float: right;
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+}
+
+/* MENU */
 .menu{
     background-color: #f0f0f0;
     margin-right: 20px;
@@ -67,6 +103,8 @@ a{
 .menu li:hover {
     background-color: #2e3135;
 }
+
+/* CONTENT */
 .content{
     padding-top: 20px;
     padding-bottom: 20px;
@@ -78,16 +116,8 @@ a{
     color: inherit;
     background-color: #ffffff;
 }  
-.float-right{
-    float: right;
-    display: flex;
-    justify-content: center; /* align horizontal */
-    align-items: center; /* align vertical */
-}
-.banner{
-    font-size: 15px;
-    font-family: 'Conv_Proxima Nova Bold', sans-serif
-}
+
+/* BUTTON */
 .button {
     border: none;
     color: white;
@@ -111,12 +141,8 @@ a{
     background-color: #33363b;
     color: white;
 }
-.footer-title{
-    font-size: 16px;
-}
-.footer-content{
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
+
+/* PRODUCT CARD */
 .product-card {
     margin-bottom: 10px;
     background-color: #fff;
@@ -126,12 +152,4 @@ a{
     margin: 6px;
     font-size: 12px;
 }
-.image-center{
-    display: block; 
-    margin: auto; 
-    width: 100%; 
-    object-fit: cover;
-}
-.price{
-    font-weight: bold;
-}
+
