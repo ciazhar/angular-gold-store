@@ -46,6 +46,12 @@ a{
 }
 .footer-title{
     font-size: 16px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+.footer-content{
+    font-size: 13px;
+    margin-bottom: 3px;
 }
 
 
@@ -73,6 +79,8 @@ a{
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
+.col-10-percent {width: 10%}
+.col-20-percent {width: 20%}
 .float-right{
     float: right;
     display: flex;  
