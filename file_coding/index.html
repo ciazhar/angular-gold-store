@@ -2,7 +2,7 @@
     <head>
         <title>ciazhar store</title>
         <link rel="stylesheet" href="../file_css/style.css">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+          <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">   -->
     </head>
     <body bgcolor="#eaeaea">
         <!-- HEADER -->
@@ -18,29 +18,64 @@
             <div class="col-1 float-right"><button class="button button-black"><a href="register.html"></a>Register</button></div>
         </div>
         
-        <!-- MENU -->
-        <div class="row">
-            
-        </div>
 
-        <div class="row middle">
-            <div class="col-1"></div>
-            <!-- MENU -->
-            <div class="menu col-2">
-                <ul>
-                    <a href="index.html"><li>Home</li></a>
-                    <a href="product.html"><li>Daftar Barang</li></a>
-                    <!-- <a href="about.html"><li>Beli Emas</li></a> -->
-                </ul>
+        <!-- MIDDLE  -->
+         <div class="row">
+             <div class="col-1"></div>
+             <!-- MENU -->
+             <div class="col-2">
+                 <div class="goldbar-menu">MENU</div>
+                 <div class="goldbar-tab">
+                    <a href="product.html">
+                        <center>
+                            <div class="row">
+                                <div class="ico-tab buy-black"></div>   
+                            </div>
+                            <div class="goldbar-title">BELI EMAS</div>
+                        </center>
+                    </a>
+                </div>
+                <div class="goldbar-tab">
+                    <a href="product.html">
+                        <center>
+                            <div class="row">
+                                <div class="ico-tab sell-black"></div>   
+                            </div>
+                            <div class="goldbar-title">JUAL EMAS</div>
+                        </center>
+                    </a>
+                </div>
+             </div>
+
+             <!-- CONtENT -->
+            <div class="col-8 content">
+                <table>
+                    <thead>
+                        <td>Deskripsi</td>
+                        <td>Harga</td>
+                        <td>Jumlah</td>
+                    </thead>
+                    <tr>
+                        <td >
+                            <div class="col-3">
+                                <img src="../file_image/emas-2,5g.png" alt="" height="100px">       
+                            </div>
+                            <div class="col-4 flex-center-vertically">
+                                Emas 100gr
+                            </div>
+                            
+                        </td>
+                        <td>Rp 10.000</td>
+                        <td>1</td>
+                    </tr>
+                </table>
+            </div> 
+
+            <!-- CART -->
+            <div>
+
             </div>
-            <!-- CONTENT -->
-            <div class="content col-7">
-                <h1>Lorem Ipsum</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-            <div class="col-1"></div>
-        </div>
+        </div> 
         
         <!-- FOOTER -->
         <div class="row footer">
@@ -73,6 +108,7 @@
             </div>
             
         </div> 
-        
+    
+        <script src="../file_js/script.js"></script>
     </body>
 </html>
