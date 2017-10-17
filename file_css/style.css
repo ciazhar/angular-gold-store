@@ -130,6 +130,11 @@ a{
     color: white;
     background-color: #2f80db;
 }
+.goldbar-tab-clicked{
+    background-color: #2f80db;
+    font-size: 10px;
+    padding: 10 0;
+}
 .buy-black{
     background-image: url("../file_image/buy-gold-black.png");
     width: 29px;
@@ -142,6 +147,12 @@ a{
     height: 36px;
     color: white;
 }
+.buy-white{
+    background-image: url("../file_image/buy-gold-white.png");
+    width: 29px;
+    height: 36px;
+    color: black;
+}
 .sell-black{
     background-image: url("../file_image/sell-gold-black.png");
     width: 29px;
@@ -152,6 +163,15 @@ a{
     background-image: url("../file_image/sell-gold-white.png");
     width: 29px;
     height: 36px;
+    color: white;
+}
+.sell-white{
+    background-image: url("../file_image/sell-gold-white.png");
+    width: 29px;
+    height: 36px;
+    color: black;
+}
+.font-white{
     color: white;
 }
 
