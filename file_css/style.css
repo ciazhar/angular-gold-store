@@ -183,6 +183,9 @@ table {
 
 thead{
     font-size: 25px;
+    /*position: fixed;
+    text-align: left;
+    background-color: white;*/
 }
 
 td {
