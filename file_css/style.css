@@ -97,6 +97,10 @@ a{
 }
 
 /* MENU */
+.menu{
+    position: fixed;
+    margin-left: 60px;
+}
 .goldbar-menu{
     background-color: #052e58;
     padding: 13 0;
@@ -170,7 +174,7 @@ tr:hover{background-color:#f5f5f5}
 .cart{
     position: fixed;
     float: right;
-    right: 0px;
+    right: 20px;
 }
 .cart-title{
     background-color: #052e58;
