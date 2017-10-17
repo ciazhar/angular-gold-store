@@ -2,7 +2,8 @@
 * {
     box-sizing: border-box; 
     font-weight: 100;
-     margin: auto; 
+    margin: auto; 
+    font-family: 'Conv_Proxima Nova Bold', sans-serif
 }
 a{
     text-decoration: none;   
@@ -20,7 +21,6 @@ a{
 }
 .banner{
     font-size: 15px;
-    font-family: 'Conv_Proxima Nova Bold', sans-serif
 }
 
 /* FOOTER */
@@ -29,16 +29,13 @@ a{
     color: white;
     padding: 3px;
     font-size: 14px;
-    font-family: 'Conv_Proxima Nova Bold', sans-serif;
     margin-top: 50px; 
     margin: 0;
 }
 .footer-title{
     font-size: 16px;
 }
-.footer-content{
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
+
 
 /* GRID SYSTEM */
 .row::after {
@@ -83,7 +80,6 @@ a{
     margin-bottom: 30px;
     color: inherit;
     background-color: #ffffff;
-    font-family: Verdana,sans-serif;    
 }  
 
 /* BUTTON */
@@ -102,13 +98,12 @@ a{
 
 /* MENU */
 .goldbar-menu{
-    background-color: #0053b0;
-    font-size: 10px;
-    padding: 10 0;
-    height: 50px;
-    font-size: 20px;
+    background-color: #052e58;
+    padding: 13 0;
+    height: 40px;
     text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: white;
 }
 .goldbar-tab{
     background-color: white;
@@ -169,4 +164,46 @@ tr:hover{background-color:#f5f5f5}
     text-align: center;
     height: 50px;
     font-size: 20px;
+}
+
+/* CART */
+.cart{
+    position: fixed;
+    float: right;
+    right: 0px;
+}
+.cart-title{
+    background-color: #052e58;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.cart-price{
+    width: 100px;
+    border: none;
+}
+.cart-purchase{
+    background-color: #4CAF50; /* Green */
+    border: none; 
+    color: white;
+    padding: 15px 30px;
+    text-align: center; 
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+select {
+   background-position: 97% center;
+   background-repeat: no-repeat;
+   border: 1px solid #AAA;
+   color: #555;
+   font-size: 13px;
+   overflow: hidden;
+    padding: 5px 10px; 
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   width: 90%;
 }
