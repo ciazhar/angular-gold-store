@@ -1,6 +1,6 @@
 /* ALL */
 * {
-    box-sizing: border-box; 
+    box-sizing: border-box;  
     font-weight: 100;
     margin: auto; 
     font-family: 'Conv_Proxima Nova Bold', sans-serif
@@ -83,7 +83,7 @@ a{
 .col-20-percent {width: 20%}
 .float-right{
     float: right;
-    display: flex;  
+    display: flex;    
     justify-content: center;  /**align horizontal   */
     align-items: center;  /**align vertical  */
 }
@@ -272,15 +272,10 @@ tr:hover{background-color:#f5f5f5}
     border-radius: 10px;
 }
 select {
-   background-position: 97% center;
-   background-repeat: no-repeat;
-   border: 1px solid #AAA;
+    border: 1px solid #AAA; 
    color: #555;
    font-size: 13px;
-   overflow: hidden;
     padding: 5px 10px; 
-   text-overflow: ellipsis;
-   white-space: nowrap;
    width: 90%;
 }
 
