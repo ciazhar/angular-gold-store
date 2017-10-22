@@ -3,7 +3,7 @@
         <title>ciazhar store</title>
         <link rel="stylesheet" href="../file_css/style.css">
     </head>
-    <body bgcolor="#eaeaea">
+    <body ng-app="sellapp" bgcolor="#eaeaea">
         <!-- HEADER -->
         <div class="row header">
             <div class="col-1"></div>
@@ -48,7 +48,7 @@
 
              <!-- CONtENT -->
             <div class="col-2"></div>
-            <div class="col-6 content">
+            <div class="col-6 content" ng-controller="sellController">
                 <table>
                     <thead>
                         <td width="10%">Deskripsi</td>
@@ -56,124 +56,29 @@
                         <td>Harga</td>
                         <td>Jumlah</td>
                     </thead>
-                    <tr>
+                    <tr ng-repeat="barang in sellList.product">  
                         <td >
-                            <img class="" src="../file_image/100g.jpg" alt="" height="100px">        
+                            <img class="" src="../file_image/{{barang.image}}" alt="" height="100px">        
                         </td>
-                        <td><h3 class="">Emas 100g</h3> </td>
-                        <td>Rp. 100.000 ,-</td>
+                        <td><h3 class="">{{barang.name}}</h3> </td>
+                        <td>Rp. {{barang.harga}} ,-</td>
                         <td>
-                            <input type="button" class="button" value="-">
-                            <input type="text" class="value" value="0">
-                            <input type="button" class="button" value="+">
+                            <input type="button" class="button" value="-" ng-click="kurang(barang)">
+                            <input type="text" class="value" value="{{barang.jumlah}}">
+                            <input type="button" class="button" value="+" ng-click="tambah(barang)">
                         </td>
                     </tr>
-                    <tr>
-                        <td >
-                            <img class="" src="../file_image/50g.jpg" alt="" height="100px">        
-                        </td>
-                        <td><h3 class="">Emas 50g</h3> </td>
-                        <td>Rp. 50.000 ,-</td>
-                        <td>
-                            <input type="button" class="button" value="-">
-                            <input type="text" class="value" value="0">
-                            <input type="button" class="button" value="+">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td >
-                            <img class="" src="../file_image/25g.jpg" alt="" height="100px">        
-                        </td>
-                        <td><h3 class="">Emas 25g</h3> </td>
-                        <td>Rp. 25.000 ,-</td>
-                        <td>
-                            <input type="button" class="button" value="-">
-                            <input type="text" class="value" value="0">
-                            <input type="button" class="button" value="+">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td >
-                            <img class="" src="../file_image/10g.jpg" alt="" height="100px">        
-                        </td>
-                        <td><h3 class="">Emas 10g</h3> </td>
-                        <td>Rp. 10.000 ,-</td>
-                        <td>
-                            <input type="button" class="button" value="-">
-                            <input type="text" class="value" value="0">
-                            <input type="button" class="button" value="+">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td >
-                            <img class="" src="../file_image/5g.jpg" alt="" height="100px">        
-                        </td>
-                        <td><h3 class="">Emas 5g</h3> </td>
-                        <td>Rp. 5.000 ,-</td>
-                        <td>
-                            <input type="button" class="button" value="-">
-                            <input type="text" class="value" value="0">
-                            <input type="button" class="button" value="+">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td >
-                            <img class="" src="../file_image/4g.jpg" alt="" height="100px">        
-                        </td>
-                        <td><h3 class="">Emas 4g</h3> </td>
-                        <td>Rp. 4.000 ,-</td>
-                        <td>
-                            <input type="button" class="button" value="-">
-                            <input type="text" class="value" value="0">
-                            <input type="button" class="button" value="+">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td >
-                            <img class="" src="../file_image/3g.jpg" alt="" height="100px">        
-                        </td>
-                        <td><h3 class="">Emas 3g</h3> </td>
-                        <td>Rp. 3.000 ,-</td>
-                        <td>
-                            <input type="button" class="button" value="-">
-                            <input type="text" class="value" value="0">
-                            <input type="button" class="button" value="+">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td >
-                            <img class="" src="../file_image/2g.jpg" alt="" height="100px">        
-                        </td>
-                        <td><h3 class="">Emas 2g</h3> </td>
-                        <td>Rp. 2.000 ,-</td>
-                        <td>
-                            <input type="button" class="button" value="-">
-                            <input type="text" class="value" value="0">
-                            <input type="button" class="button" value="+">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td >
-                            <img class="" src="../file_image/1g.jpg" alt="" height="100px">        
-                        </td>
-                        <td><h3 class="">Emas 1g</h3> </td>
-                        <td>Rp. 1.000 ,-</td>
-                        <td>
-                            <input type="button" class="button" value="-">
-                            <input type="text" class="value" value="0">
-                            <input type="button" class="button" value="+">
-                        </td>
-                    </tr>
+
                 </table>
             </div> 
 
             <!-- CART -->
-            <div class="col-3 content cart">
+            <div class="col-3 content cart" ng-controller="sellController">
                 <div class="cart-title">TOTAL HARGA</div>
                 <table>
                     <tr>
                         <td>Harga</td>
-                        <td><input type="text" class="cart-price" value="Rp 10000,-" readonly></td>
+                        <td><input type="text" class="cart-price" value="Rp {{price}},-" readonly></td>
                     </tr>
                     <tr>
                         <td>Jenis Bank</td>
@@ -229,5 +134,8 @@
             </div>
             <div class="col-10-percent"></div>
         </div> 
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+        <script src="../file_js/script.js"></script>
     </body>
 </html>
