@@ -49,23 +49,33 @@ app.controller('sellController',function($scope,$http,$window){
             "name": "Emas 1g",
             "harga":"1000",
             "jumlah":"0"
-        }
-    ]
+        },
+        
+        ],
+        "totalPrice":"0"
     };
 
     $scope.kurang = function(barang){
+        var harga = parseInt(barang.harga)
+        var hargaAwal = parseInt($scope.sellList.totalPrice)
+
         if(barang.jumlah==0){
             alert('Limit')
         }
         else{
             barang.jumlah--
+            $scope.sellList.totalPrice = hargaAwal - harga
+            console.log($scope.sellList.totalPrice)
         }
     }
 
     $scope.tambah = function(barang){
-        barang.jumlah++
-    }
+        var hargaAwal = parseInt($scope.sellList.totalPrice)
+        var harga = parseInt(barang.harga)
 
-    $scope.price = 0
+        barang.jumlah++
+        $scope.sellList.totalPrice = hargaAwal + harga
+        console.log($scope.sellList.totalPrice)
+    }
 
 });
