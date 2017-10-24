@@ -400,21 +400,31 @@ select {
     margin-top: 100px;
     margin-bottom: 130px;
 }
+.landing-title-main{
+    margin-bottom: 30px;
+}
 .landing-title{
-    font-size: 60px;
+    font-size: 55px;
     color: white;
 }
 .landing-highlight-title{
-    font-size: 60px;
+    font-size: 55px;
     color: #ff7700;
+}
+.landing-content{
+    padding: 100 0;
+    background-color: white;
 }
 .white{
     /* font-size: 30px; */
     color: white;
     margin-bottom: 10px;
 }
+.black{
+    color: black;
+}
 .register{
-    background: url('../file_image/bg.png');
+    background: url('../file_image/bg.svg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
