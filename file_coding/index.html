@@ -1,6 +1,81 @@
 <html>
-    <head></head>
-    <body>
+    <head>
+        <title>ciazhar store</title>
+        <link rel="stylesheet" href="../file_css/style.css">
+    </head>
+    <body ng-app="sellapp" bgcolor="#eaeaea">
+        <div ng-controller="sellController">
+            <!-- HEADER -->
+            <div class="row header">
+                <div class="col-1"></div>
+                <div class="banner col-6"> 
+                    <a href="index.html">
+                        <img src="../file_image/ciazhar.png" alt="" height="50px" width="125px">
+                        your gold solution
+                    </a>
+                </div> 
+                <div class="col-1 float-right" style="margin-right:20px;"><a href="register.html" class="header-a">Register</a></div>
+            </div>
+            
+            <!-- CONTENT -->
+            <div class="row">
+                <div class="landing">
+                    <div class="fullscreen-bg">
+                        <video loop muted autoplay poster="../file_image/bg.png" class="fullscreen-bg__video">
+                            <source src="../file_image/landing-video.mp4" type="video/mp4">  
+                        </video>
+                    </div>
+
+                    <div class="center">
+                        <h1 class="landing-title landing-title-main">MULAI TRADING DENGAN <br> <span class="landing-highlight-title">CIAZHAR</span> <br>SEKARANG</h1>
+                        <h4 class="white">Login</h4>
+                        <input type="email" class="login-input" placeholder="Email">
+                        <input type="password" class="login-input" placeholder="Password">
+                        <br><input type="button" class="login-submit" value="Login">
+                        <h4 class="white">Belum Punya Akun ? <a href="#register" class="register-here">Daftar Disini</a></h4>
+                    </div>
+                </div>
+
+                <div id="register" class="register center">
+                    <h1 class="landing-title landing-title-main">BERGABUNG DENGAN <br> <span class="landing-highlight-title">CIAZHAR</span> <br>SEKARANG</h1>
+                    <h4 class="white">Register</h4>
+                    <input type="email" class="login-input" placeholder="Email">
+                    <input type="password" class="login-input" placeholder="Password">
+                    <br><input type="button" class="login-submit" value="Register">
+                </div>
+            </div>
+            
+            
+            
+            <!-- FOOTER -->
+            <div class="row footer">
+                <div class="col-10-percent"></div>
+                <div class="col-20-percent">
+                    <h4 class="footer-title">ABOUT US</h4>
+                    <h5 class="footer-content">Profile</h5>
+                    <h5 class="footer-content">Costumer Review</h5>
+                </div>
+                <div class="col-20-percent">
+                    <h4 class="footer-title">HELP AND SUPPORT</h4>
+                    <h5 class="footer-content">Shopping Guide</h5>
+                    <h5 class="footer-content">Payment Guide</h5>
+                    <h5 class="footer-content">Product &amp; Shipping Policy</h5>
+                    <h5 class="footer-content">FAQ</h5>
+                </div>
+                <div class="col-20-percent">
+                    <h4 class="footer-title">SERVICES</h4>
+                </div>
+                <div class="col-20-percent">
+                    <h4 class="footer-title">CONTACT US</h4>
+                    <h5 class="footer-content">daisetsunakama@gmail.com</h5>
+                </div>
+                <div class="col-10-percent"></div>
+            </div> 
+
+        </div>
         
+        <script src="../file_js/jquery.min.js"></script>
+        <script src="../file_js/scroll.js"></script>
+
     </body>
 </html>
