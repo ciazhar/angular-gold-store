@@ -490,3 +490,15 @@ select {
 .modal-body {
     padding: 20px 16px;
 }
+.modal-button{
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 10px;
+}
+.modal-button:hover{
+    background-color: #409943;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 10px;
+}
