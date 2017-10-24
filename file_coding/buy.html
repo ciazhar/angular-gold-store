@@ -104,10 +104,29 @@
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <center><input type="button" class="cart-purchase" value="Beli Sekarang"></center>
+                                 <center><input type="button" id="button-purchase" class="cart-purchase" value="Beli Sekarang"></center> 
+                                
+                                <!-- The Modal -->
+                                <div id="modal-purchase" class="modal">
+                                    <!-- Modal content -->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <span class="close">&times;</span>
+                                            <h2>Selamat Pelanggan yang Terhormat</h2>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="../file_image/smile.png" alt="" width="20%">
+                                            <p>Transaksi anda berlangsung dengan sukses. Barang yang anda beli akan dikirim ke alamat anda dalam kurun waktu 3 hari. Terima kasih karena telah menggunakan layanan kami.</p>
+                                            <p>Silahkan cek kembali rekening anda</p><br><br>
+                                            <a href="index.html" class="header-a">Kembali ke Beranda</a>
+                                            <a href="buy.html" class="header-a">Lanjutkan Transaksi</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </td>
                         </tr>
                     </table>
+                    
                 </div>
             </div> 
             
@@ -140,5 +159,6 @@
         
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
         <script src="../file_js/script.js"></script>
+        <script src="../file_js/modal.js"></script>
     </body>
 </html>
