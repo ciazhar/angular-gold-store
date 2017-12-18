@@ -3,8 +3,8 @@
         <title>ciazhar store</title>
         <link rel="stylesheet" href="../file_css/style.css">
     </head>
-    <body ng-app="sellapp" bgcolor="#eaeaea">
-        <div ng-controller="sellController">
+    <body ng-app="indexApp" bgcolor="#eaeaea">
+        <div ng-controller="indexController">
             <!-- HEADER -->
             <div class="row header">
                 <div class="col-1"></div>
@@ -29,9 +29,10 @@
                     <div class="center">
                         <h1 class="landing-title landing-title-main">MULAI TRADING DENGAN <br> <span class="landing-highlight-title">CIAZHAR</span> <br>SEKARANG</h1>
                         <h4 class="white">Login</h4>
-                        <input type="email" class="login-input" placeholder="Email">
-                        <input type="password" class="login-input" placeholder="Password">
-                        <br><input type="button" class="login-submit" value="Login" onclick="window.location='buy.html'">
+                        <input type="email" class="login-input" ng-model="login.email" placeholder="Email">
+                        <input type="password" class="login-input" ng-model="login.password" placeholder="Password">
+                        <!-- <br><input type="button" class="login-submit" value="Login" onclick="window.location='buy.html'"> -->
+                        <br><input type="button" class="login-submit" value="Login" ng-click="doLogin()">
                         <h4 class="white">Belum Punya Akun ? <a href="#register" class="register-here">Daftar Disini</a></h4>
                     </div>
                 </div>
@@ -94,6 +95,8 @@
         </div>
         
         <script src="../file_js/jquery.min.js"></script>
+        <script src="../file_js/angular.min.js"></script>
+        <script src="../file_js/login.js"></script>
         <script src="../file_js/scroll.js"></script>
 
     </body>
