@@ -1,16 +1,17 @@
 <html>
     <head>
         <title>ciazhar store</title>
-        <link rel="stylesheet" href="../file_css/style.css">
+        <link rel="stylesheet" href="./file_css/style.css">
     </head>
     <body ng-app="sellapp" bgcolor="#eaeaea">
-        <div ng-controller="sellController">
+        <div ng-controller="buyController">
+        
             <!-- HEADER -->
             <div class="row header">
                 <div class="col-1"></div>
                 <div class="banner col-6"> 
                     <a href="index.html">
-                        <img src="../file_image/ciazhar.png" alt="" height="50px" width="125px">
+                        <img src="./file_image/ciazhar.png" alt="" height="50px" width="125px">
                         your gold solution
                     </a>
                 </div> 
@@ -25,23 +26,23 @@
                 <!-- MENU -->
                 <div class="col-2 menu">
                     <div class="goldbar-menu">MENU</div>
-                    <div class="goldbar-tab-clicked">
+                    <div class="goldbar-tab">
                         <a href="buy.html">
                             <center>
                                 <div class="row">
-                                    <div class="buy-white"></div>   
+                                    <div class="buy-black"></div>   
                                 </div>
-                                <div class="font-white">BELI EMAS</div>
+                                <div class="">BELI EMAS</div>
                             </center>
                         </a>
                     </div>
-                    <div class="goldbar-tab">
+                    <div class="goldbar-tab-clicked">
                         <a href="sell.html">
                             <center>
                                 <div class="row">
-                                    <div class="sell-black"></div>   
+                                    <div class="sell-white"></div>   
                                 </div>
-                                <div class="">JUAL EMAS</div>
+                                <div class="font-white">JUAL EMAS</div>
                             </center>
                         </a>
                     </div>
@@ -53,23 +54,22 @@
                     <table>
                         <thead>
                             <td width="10%">Deskripsi</td>
-                            <td></td> 
+                            <td></td>
                             <td>Harga</td>
                             <td>Jumlah</td>
                         </thead>
-                        <tr ng-repeat="barang in sellList.product">  
-                            <td >
-                                <img class="" src="../file_image/{{barang.image}}" alt="" height="100px">        
-                            </td>
-                            <td><h3 class="">{{barang.name}}</h3> </td>
-                            <td>Rp. {{barang.harga}} ,-</td>
-                            <td>
-                                <input type="button" class="button" value="-" ng-click="kurang(barang)">
-                                <input type="text" class="value" value="{{barang.jumlah}}">
-                                <input type="button" class="button" value="+" ng-click="tambah(barang)">
-                            </td>
-                        </tr>
-
+                        <tr ng-repeat="barang in buyList.product">  
+                                <td >
+                                    <img class="" src="./file_image/{{barang.image}}" alt="" height="100px">        
+                                </td>
+                                <td><h3 class="">{{barang.name}}</h3> </td>
+                                <td>Rp. {{barang.harga}} ,-</td>
+                                <td>
+                                    <input type="button" class="button" value="-" ng-click="kurang(barang)">
+                                    <input type="text" class="value" value="{{barang.jumlah}}" disabled="true">
+                                    <input type="button" class="button" value="+" ng-click="tambah(barang)">
+                                </td>
+                            </tr>
                     </table>
                 </div> 
 
@@ -79,7 +79,7 @@
                     <table>
                         <tr>
                             <td>Harga</td>
-                            <td><input type="text" class="cart-price" value="Rp {{sellList.totalPrice}},-" readonly></td> 
+                            <td><input type="text" class="cart-price" value="Rp {{buyList.totalPrice}},-" readonly></td> 
                         </tr>
                         <tr>
                             <td>Jenis Bank</td>
@@ -93,19 +93,8 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Periode Cicilan</td>
-                            <td>
-                                <select name="" id="">
-                                    <option value="">3 Bulan</option>
-                                    <option value="">6 Bulan</option>
-                                    <option value="">12 Bulan</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
                             <td colspan="2">
-                                 <center><input type="button" id="button-purchase" class="cart-purchase" value="Beli Sekarang"></center> 
-                                
+                                <center><input type="button" id="button-purchase" class="cart-purchase" value="Jual Sekarang"></center>
                                 <!-- The Modal -->
                                 <div id="modal-purchase" class="modal">
                                     <!-- Modal content -->
@@ -115,17 +104,16 @@
                                             <h2>Selamat Pelanggan yang Terhormat</h2>
                                         </div>
                                         <div class="modal-body">
-                                            <img src="../file_image/smile.png" alt="" width="20%">
-                                            <p>Transaksi anda berlangsung dengan sukses. Barang yang anda beli akan dikirim ke alamat anda dalam kurun waktu 3 hari. Terima kasih karena telah menggunakan layanan kami.</p><br><br>
+                                            <img src="./file_image/smile.png" alt="" width="20%">
+                                            <p>Transaksi anda berlangsung dengan sukses. Silahkan cek kembali rekening anda. Terima kasih karena telah menggunakan layanan kami.</p><br><br>
                                             <a href="index.html" class="modal-button">Kembali ke Beranda</a>
-                                            <a href="buy.html" class="modal-button">Lanjutkan Transaksi</a>
+                                            <a href="sell.html" class="modal-button">Lanjutkan Transaksi</a>
                                         </div>
                                     </div>
                                 </div>
                             </td>
                         </tr>
                     </table>
-                    
                 </div>
             </div> 
             
@@ -156,8 +144,8 @@
 
         </div>
         
-        <script src="../file_js/angular.min.js"></script>
-        <script src="../file_js/script.js"></script>
-        <script src="../file_js/modal.js"></script>
+        <script src="./file_js/angular.min.js"></script>
+        <script src="./file_js/script.js"></script>
+        <script src="./file_js/modal.js"></script>
     </body>
 </html>

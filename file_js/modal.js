@@ -23,3 +23,23 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+
+var modalProduct = document.getElementById('modal-product');
+var imgProduct = document.getElementById("img-product");
+var imgShow = document.getElementById("img-show");
+var captionProduct = document.getElementById("caption-product");
+var closeProduct = document.getElementsByClassName("close-product")[0];
+imgProduct.onclick = function() {
+    modalProduct.style.display = "block";
+    imgShow.src = this.src;
+    captionProduct.innerHTML =this.alt;
+}
+closeProduct.onclick = function() {
+    modalProduct.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modalProduct.style.display = "none";
+    }
+}

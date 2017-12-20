@@ -2,7 +2,7 @@ var app = angular.module('indexApp',[]);
 
 app.controller('indexController',function ($scope,$window) {
 	
-	var urlBuy = "../file_coding/buy.html";
+	var urlBuy = "buy.html";
 	
 	$scope.doLogin = function() {
 		if($scope.login.email == null){
