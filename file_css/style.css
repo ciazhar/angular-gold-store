@@ -424,7 +424,7 @@ select {
     color: black;
 }
 .register{
-    background: url('../file_image/bg.svg');
+    background: url('../file_image/bg.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
